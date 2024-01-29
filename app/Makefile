@@ -2,10 +2,8 @@ run-dist:
 		./build/install/app/bin/app
 
 installDist:
-		./gradlew installDist
-
-clean:
 		./gradlew clean
+		./gradlew installDist
 
 lint:
 		./gradlew checkstyleMain
