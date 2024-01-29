@@ -6,3 +6,6 @@ installDist:
 
 clean:
 		./gradlew clean
+
+lint:
+		./gradlew checkstyleMain
