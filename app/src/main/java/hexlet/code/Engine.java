@@ -3,6 +3,10 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+
+    public static final int ROUNDS = 3;
+    public static final int MAXRANGE = 100;
+
     public static void gameLauncher(String gameTitle, String[][] questionAndAnswerIndices) {
         System.out.println("\nWelcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -28,13 +32,13 @@ public class Engine {
             }
         }
 
-        if (correctUserResponse == 3) {
+        if (correctUserResponse == ROUNDS) {
             System.out.println("Congratulations, " + userName + "!");
         }
     }
 
     public static int generateRandomNumber() {
-        return (int) (Math.random() * 100) + 1;
+        return (int) (Math.random() * MAXRANGE) + 1;
     }
 
 }

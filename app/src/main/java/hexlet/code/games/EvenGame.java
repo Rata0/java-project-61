@@ -2,13 +2,14 @@ package hexlet.code.games;
 
 import static hexlet.code.Engine.gameLauncher;
 import static hexlet.code.Engine.generateRandomNumber;
+import static hexlet.code.Engine.ROUNDS;
 
 public class EvenGame {
     public static void startGame() {
         String gameTitle = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[][] questionAndAnswer = new String[3][2];
+        String[][] questionAndAnswer = new String[ROUNDS][2];
 
-        for (int index = 0; index < 3; index += 1) {
+        for (int index = 0; index < ROUNDS; index += 1) {
             int randomNumber = generateRandomNumber();
             questionAndAnswer[index][0] = Integer.toString(randomNumber);
 

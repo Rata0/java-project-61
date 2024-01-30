@@ -3,12 +3,14 @@ package hexlet.code.games;
 import java.util.Random;
 import static hexlet.code.Engine.gameLauncher;
 import static hexlet.code.Engine.generateRandomNumber;
+import static hexlet.code.Engine.ROUNDS;
+
 public  class CalculatorGame {
     public static void startGame() {
         String gameTitle = "What is the result of the expression?";
-        String[][] questionAndAnswer = new String[3][2];
+        String[][] questionAndAnswer = new String[ROUNDS][2];
 
-        for (int index = 0; index < 3; index += 1) {
+        for (int index = 0; index < ROUNDS; index += 1) {
             int numberOne = generateRandomNumber();
             int numberTwo = generateRandomNumber();
             String operation = getRandomMathematicalOperation();

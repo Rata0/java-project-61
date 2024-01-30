@@ -1,13 +1,17 @@
 package hexlet.code.games;
 
+
+import static hexlet.code.Engine.ROUNDS;
 import static hexlet.code.Engine.gameLauncher;
 import static hexlet.code.Engine.generateRandomNumber;
+
+
 public class Prime {
     public static void startGame() {
         String gameTitle = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] questionAndAnswer = new String[3][2];
+        String[][] questionAndAnswer = new String[ROUNDS][2];
 
-        for (int index = 0; index < 3; index += 1) {
+        for (int index = 0; index < ROUNDS; index += 1) {
             int number = generateRandomNumber();
             questionAndAnswer[index][0] = Integer.toString(number);
 

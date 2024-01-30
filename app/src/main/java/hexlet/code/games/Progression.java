@@ -1,13 +1,15 @@
 package hexlet.code.games;
 
+import static hexlet.code.Engine.ROUNDS;
 import static hexlet.code.Engine.gameLauncher;
 import static hexlet.code.Engine.generateRandomNumber;
+
 public class Progression {
     public static void startGame() {
         String gameTitle = "What number is missing in the progression?";
-        String[][] questionAndAnswer = new String[3][2];
+        String[][] questionAndAnswer = new String[ROUNDS][2];
 
-        for (int index = 0; index < 3; index += 1) {
+        for (int index = 0; index < ROUNDS; index += 1) {
             String[] progressionGenerate = generateProgression();
             int randomIndex = getRandomNumberUpTo10() - 1;
             String response = progressionGenerate[randomIndex];
@@ -23,7 +25,8 @@ public class Progression {
     }
 
     public static String[] generateProgression() {
-        String[] progression = new String[10];
+        int length = 10;
+        String[] progression = new String[length];
         int startNumber = generateRandomNumber();
         int variance = generateRandomNumber();
 
@@ -49,7 +52,8 @@ public class Progression {
     }
 
     public static int getRandomNumberUpTo10() {
-        return (int) (Math.random() * 10) + 1;
+        int maxRange = 10;
+        return (int) (Math.random() * maxRange) + 1;
     }
 
 }
