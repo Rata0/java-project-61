@@ -34,7 +34,7 @@ public class Engine {
     }
 
     public static int generateRandomNumber() {
-        return (int) (Math.random() * 100);
+        return (int) (Math.random() * 100) + 1;
     }
 
 }
