@@ -30,7 +30,7 @@ public class Progression {
         int startNumber = generateRandomNumber();
         int variance = generateRandomNumber();
 
-        for (int index = 0; index < progression.length; index += 1) {
+        for (int index = 0; index < length; index += 1) {
             progression[index] = Integer.toString(startNumber + (index * variance));
         }
 
