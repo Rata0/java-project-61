@@ -4,7 +4,7 @@ import static hexlet.code.Engine.gameLauncher;
 import static hexlet.code.Engine.generateRandomNumber;
 public class Progression {
     public static void startGame() {
-        String gameTitle = "What is the result of the expression?";
+        String gameTitle = "What number is missing in the progression?";
         String[][] questionAndAnswer = new String[3][2];
 
         for (int index = 0; index < 3; index += 1) {
