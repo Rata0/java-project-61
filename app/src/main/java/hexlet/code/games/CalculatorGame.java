@@ -17,7 +17,7 @@ public  class CalculatorGame {
             questionAndAnswer[index][0] = expression;
 
             int response = calculateExpression(numberOne, operation, numberTwo);
-            questionAndAnswer[index][1] = response + "";
+            questionAndAnswer[index][1] = Integer.toString(response);
         }
 
         gameLauncher(gameTitle, questionAndAnswer);
