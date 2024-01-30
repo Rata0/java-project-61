@@ -13,7 +13,7 @@ public class Progression {
             String response = progressionGenerate[randomIndex];
             questionAndAnswer[index][1] = response;
 
-            progressionGenerate[randomIndex] = "...";
+            progressionGenerate[randomIndex] = "..";
             String progressionString = convertArrayToStringWithSpaces(progressionGenerate);
             questionAndAnswer[index][0] = progressionString;
 
