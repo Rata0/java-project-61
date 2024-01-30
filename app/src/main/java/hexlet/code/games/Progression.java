@@ -5,6 +5,7 @@ import static hexlet.code.Engine.gameLauncher;
 import static hexlet.code.Engine.generateRandomNumber;
 
 public class Progression {
+    private static final int PROGRESSION_LENGTH = 10;
     public static void startGame() {
         String gameTitle = "What number is missing in the progression?";
         String[][] questionAndAnswer = new String[ROUNDS][2];
@@ -25,7 +26,7 @@ public class Progression {
     }
 
     public static String[] generateProgression() {
-        int length = 10;
+        int length = PROGRESSION_LENGTH;
         String[] progression = new String[length];
         int startNumber = generateRandomNumber();
         int variance = generateRandomNumber();
@@ -52,8 +53,7 @@ public class Progression {
     }
 
     public static int getRandomNumberUpTo10() {
-        int maxRange = 10;
-        return (int) (Math.random() * maxRange) + 1;
+        return (int) (Math.random() * PROGRESSION_LENGTH) + 1;
     }
 
 }
