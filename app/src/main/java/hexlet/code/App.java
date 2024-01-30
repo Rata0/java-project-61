@@ -15,14 +15,14 @@ public class App {
         int input = scanner.nextInt();
 
         switch (input) {
-            case 2:
-                EvenGame.startGame();
+            case 0:
+                System.out.println("Exiting the program.");
                 break;
             case 1:
                 Cli.runCli();
                 break;
-            case 0:
-                System.out.println("Exiting the program.");
+            case 2:
+                EvenGame.startGame();
                 break;
             default:
                 System.out.println("Invalid choice. Exiting the program. Goodbye!");
